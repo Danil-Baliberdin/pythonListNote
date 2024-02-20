@@ -1,5 +1,5 @@
-from list_of_notes import ListOfNotes
-from view import View
+from listN import ListOfNotes
+from NoteView import View
 
 
 class Menu:

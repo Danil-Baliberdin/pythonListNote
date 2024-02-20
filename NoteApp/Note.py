@@ -1,24 +1,32 @@
+from datetime import datetime
+
+
 class Note:
-    head = ""
-    body = ""
-    id = 0
-    dateOfCreationOtChanging = ""
+    __id = 0
+    __name = ""
+    __date = ""
+    __text = ""
 
-    def __init__(self,texthead,textbody,date):
-        self.head = texthead
-        self.body = textbody
-        self.dateOfCreationOtChanging = date
-        Note.id =+ 1
-        self.id = Note.id
-    
-    def changeHead(self,text):
-        self.head = text
+    def set_id(self, value):
+        self.__id = value
 
-    def changeBody(self,text):
-        self.body = text
-    
-    def toString():
-        print("id = {id}, head = {head}, body = {body}, date = {dateOfCreationOtChanging}")
+    def set_name(self, name):
+        self.__name = name
 
-    def getiD(self):
-        return self.id 
+    def set_text(self, text):
+        self.__text = text
+
+    def update_date(self):
+        self.__date = datetime.now().strftime('%Y, %B %d, %A | %H:%M')
+
+    def get_id(self):
+        return self.__id
+
+    def get_name(self):
+        return self.__name
+
+    def get_date(self):
+        return self.__date
+
+    def get_text(self):
+        return self.__text
